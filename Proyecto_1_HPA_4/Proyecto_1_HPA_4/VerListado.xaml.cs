@@ -15,6 +15,19 @@ namespace Proyecto_1_HPA_4
         public VerListado()
         {
             InitializeComponent();
+            var listView = new ListView();
+            listView.ItemsSource = new string[]
+            {
+                  "mono",
+                  "monodroid",
+                  "monotouch",
+                  "monorail",
+                  "monodevelop",
+                  "monotone",
+                  "monopoly",
+                  "monomodal",
+                  "mononucleosis"
+            };
         }
     }
 }
