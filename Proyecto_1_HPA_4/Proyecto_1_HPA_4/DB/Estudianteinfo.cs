@@ -7,30 +7,18 @@ namespace Proyecto_1_HPA_4.DB
 {
     class Estudianteinfo
     {
-        public List<Estudiante> ListadodeEstudiantes;
-
-        public Estudianteinfo()
+        public static List<Estudiante> ListadodeEstudiantes;
+        public static List<Estudiante> ObtenerEstudiantes()
         {
-            ListadodeEstudiantes = new List<Estudiante>
+            if(ListadodeEstudiantes == null)
             {
-                new Estudiante
-                {
-                    Nombre="Diego Casto",
-                    Cedula="1-1234-12345",
-                    Fecha=DateTime.Now.ToString()
-                },
-                new Estudiante
-                {
-                    Nombre="Pedro Jaramillo",
-                    Cedula="1-1234-12346",
-                    Fecha=DateTime.Now.ToString()
-                }
-            };
+                ListadodeEstudiantes = new List<Estudiante>();
+            }
+            return ListadodeEstudiantes;
         }
-
-        public void AgregarEstudiante(Estudiante estudiante)
+        public static void AgregarEstudiante(Estudiante estudiante)
         {
-            ListadodeEstudiantes.Add(estudiante);
+            ObtenerEstudiantes().Add(estudiante);
         }
     }
 }
