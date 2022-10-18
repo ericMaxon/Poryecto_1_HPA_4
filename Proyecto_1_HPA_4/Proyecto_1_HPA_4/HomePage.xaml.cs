@@ -12,6 +12,7 @@ namespace Proyecto_1_HPA_4
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage : ContentPage
     {
+
         public HomePage()
         {
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace Proyecto_1_HPA_4
         }
         private void Ver_Listado(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new VerListado());
+            Navigation.PushAsync(new VerListado2());
         }
 
 
